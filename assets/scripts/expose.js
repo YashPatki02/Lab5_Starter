@@ -7,6 +7,8 @@ window.addEventListener('DOMContentLoaded', init);
 function init() {
   let hornSelect = document.getElementById('horn-select');
   let hornAudio = document.querySelector('audio');
+  const jsConfetti = new JSConfetti();
+
 
   hornSelect.addEventListener('change', function() {
     // Set image and audio based on selected value
@@ -43,7 +45,6 @@ function init() {
   });
   
   button.onclick = function() {
-    const jsConfetti = new JSConfetti();
     if (hornSelect.value == 'party-horn') {
       jsConfetti.addConfetti({
         emojis: ['🎉', '🎊', '🎈', '✨', '⚡️'],
